@@ -1,15 +1,17 @@
 const anterior = document.getElementById('anterior')
 const siguiente = document.getElementById('siguiente')
 const targetas = document.getElementById('targetas')
+const volver = document.getElementById('volver')
+const navLista = document.getElementById('navLista')
+let buscador = document.getElementById('buscador')
+let buscar = document.getElementById('buscar')
 let primero = 1;
-let ultimo = 7;
+let ultimo = 8;
 
 
 
-async function getPokemon (id){
-    const url = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-    /*let url = `https://pokeapi.co/api/v2/pokemon/${id}/`
-    fetch(url)*/
+function getPokemon (id){
+    const url = fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
         .then(Response => Response.json())
         .then(data => pintar(data))
         .catch(error => console.log(error))
@@ -26,16 +28,27 @@ function orden (primero, ultimo){
     }
 }
 
+buscar.onclick = function () {
+    let id = buscador.value
+    limpiar(targetas)
+    getPokemon(id)
+}
+
+volver.addEventListener('click', () => {
+    limpiar(targetas);
+    orden (primero, ultimo);
+})
+
 anterior.addEventListener('click', () => {
     if(primero != 1){
-        primero -= 8;
+        primero -= 9;
         limpiar(targetas);
         orden (primero, ultimo);
     }
 })
 
 siguiente.addEventListener('click', () => {
-        primero += 8;
+        primero += 9;
         limpiar(targetas);
         orden (primero, ultimo);
 })

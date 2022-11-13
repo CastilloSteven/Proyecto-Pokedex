@@ -12,21 +12,17 @@ html{
     font-size: 2rem;
     background-color: #FE3737;
     text-align: center;
-    padding: 2rem;
+    padding:2rem;
     color: #ffffff;
 }
 
 .contenedor{
-    display: flex;
     margin:0;
-
     font-size: 1.1rem;
 }
 
 #targetas{
     width: 60%;
- /*   display: grid;
-    grid-template-columns: repeat(4, 1fr);*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -34,18 +30,19 @@ html{
 }
 
 #pokemones{
-    width: 150px;
+    width: 160px;
     border: 1px solid black;
     text-align: center;
     background-color: #FE3737;
     color: #ffffff;
-    margin: 20px 10px;
+    margin: 20px 15px;
     border-radius: 20px;
     padding: 2px;
 }
 
 #imagenes{
     width: 90%;
+    height: auto;
     border: 1px solid black;
     margin-top: 5px;
     background-color: #ffffff;
@@ -64,17 +61,19 @@ html{
     margin-top: 20px;
     border-radius: 20px;
     padding: 5px;
+    color: #ffffff;
+    
 }
 
-#busqueda > * {
+#busqueda > *{
     margin: auto;
-    color: #ffffff;
 }
 
 .buscador{
     width: 60%;
     border-radius: 10px;
     padding: 3px;
+    text-align: center;
 }
 
 .buscar{
@@ -83,4 +82,34 @@ html{
     padding: 3px 10px;
     font-size: 1.1rem;
     border-radius: 10px;
+    color: #ffffff;
+}
+
+.buscar:hover , .paginacion li:hover{
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.paginacion{
+    background-color: #1C51EA;
+}
+
+.paginacion ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.paginacion li{
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    background-color: #FE3737;
+    margin: 20px 20px;
+    color: #ffffff;
+}
+
+.boton{
+    cursor: pointer;
 }

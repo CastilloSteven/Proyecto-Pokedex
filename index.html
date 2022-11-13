@@ -13,25 +13,23 @@
     </header>
 
     <div class="contenedor">
-        <section id="targetas"></section>
         <section id="busqueda">
             <p>Buscador de pokemon</p>
             <input type="text" id="buscador" class="buscador">
-            
-            <button id="buscar" class="buscar">Buscar</button>
-            <!--<button id="nuevo">Aleatorio</button>-->
+            <button id="buscar" class="buscar boton">Buscar</button>
         </section>
+        <section id="targetas"></section>
     </div>
 
-    <nav>
-        <ul>
-            <li id="anterior">Anterior</li>
-            <li id="siguiente">Siguiente</li>
+    <nav class="paginacion">
+        <ul id="navLista">
+            <li id="anterior" class="boton">Anterior</li>
+            <li id="volver" class="boton">volver</li>
+            <li id="siguiente" class="boton">Siguiente</li>
         </ul>
     </nav>
     
     <footer>
-        <p><a href="https://github.com/CastilloSteven/Proyecto-Pokedex">GitHub</a></p>
     </footer>
     <script src="logica.js"></script>
 </body>
