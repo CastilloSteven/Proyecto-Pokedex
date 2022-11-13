@@ -9,27 +9,30 @@
 </head>
 <body>
     <header id="header">
-        <h1>POKEDEX </h1>
+        <img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" alt="Pokedex">
     </header>
 
     <div class="contenedor">
-        <section id="targetas">
-            <article id="pokemones">
-                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/194.png" alt="w" id="imagenes">
-                <span id="nombrePokemon">asdqwe</span> <br>
-                <span id="idPokemon">1</span>
-            </article>
-        </section>
-
+        <section id="targetas"></section>
         <section id="busqueda">
             <p>Buscador de pokemon</p>
-            <input type="text">
+            <input type="text" id="buscador" class="buscador">
             
-            <button id="nuevo">Aleatorio</button>
+            <button id="buscar" class="buscar">Buscar</button>
+            <!--<button id="nuevo">Aleatorio</button>-->
         </section>
     </div>
-    
 
+    <nav>
+        <ul>
+            <li id="anterior">Anterior</li>
+            <li id="siguiente">Siguiente</li>
+        </ul>
+    </nav>
+    
+    <footer>
+        <p><a href="https://github.com/CastilloSteven/Proyecto-Pokedex">GitHub</a></p>
+    </footer>
     <script src="logica.js"></script>
 </body>
 </html>
